@@ -1,0 +1,105 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "%DOC%"
+            ]
+          },
+        {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "%DOC%"
+        ]
+      },
+      {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+          "%DOCFILE%"
+        ]
+      }
+    ],
+  
+  
+    "latex-workshop.latex.recipes": [
+      {
+        "name": "xelatex",
+        "tools": [
+          "xelatex"
+        ]
+      },
+      {
+        "name": "pdflatex",
+        "tools": [
+          "pdflatex"
+        ]
+      },
+      {
+        "name": "xe->bib->xe->xe",
+        "tools": [
+          "xelatex",
+          "bibtex",
+          "xelatex",
+          "xelatex"
+        ]
+      },
+      {
+        "name": "pdflatex -> bibtex -> pdflatex*2",
+        "tools": [
+          "pdflatex",
+          "bibtex",
+          "pdflatex",
+          "pdflatex"
+        ]
+      }
+    ],
+  
+    
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+  
+    "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.view.pdf.external.viewer.command": "D:/SumatraPDF/SumatraPDF.exe",
+  
+    "latex-workshop.view.pdf.external.synctex.command": "D:/SumatraPDF/SumatraPDF.exe",
+    "latex-workshop.view.pdf.external.synctex.args": [
+      "-forward-search",
+      "%TEX%",
+      "%LINE%",
+      "-reuse-instance",
+      "-inverse-search",
+      "\"D:/Microsoft VS Code/Code.exe\" -g \"%f:%l\"",
+      "%PDF%"
+    ],
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "workbench.colorTheme": "Solarized Light",
+    "editor.fontSize": 25,
+    "[latex]": {
+      
+      
+
+
+      "editor.formatOnPaste": false,
+      "editor.suggestSelection": "recentlyUsedByPrefix"
+    },
+    "editor.wordWrap": "on",
+    "latex-preview.command": "xelatex",
+    "editor.tabCompletion": "on",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editorAssociations": [
+      {
+        "viewType": "jupyter.notebook.ipynb",
+        "filenamePattern": "*.ipynb"
+      }
+    ]
+  }
