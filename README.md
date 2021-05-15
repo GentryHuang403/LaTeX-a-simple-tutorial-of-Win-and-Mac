@@ -135,6 +135,97 @@ CTeX会污染系统环境变量以及造成一些其他对系统有破坏性的�
   到此为止已经完成了所有的配置，自此可以导入.tex文件或新建文件并将类型设置为latex，开始写作。
   
   
+  ### MacOS (X86)
+  现在再来说一说Mac上的VSCODE+TeX如何实现，这里的教程是给intel版mac使用的，我没有m1的mac所以也不知道怎么弄。
+  首先随便用一个搜索引擎搜索MacTeX，下载并全部按照默认操作安装即可；
+  
+  接着下载VSCODE for mac，我没有找到国内镜像站，就把链接直接放上来了：
+  https://cloud.189.cn/t/I7JrEram67Fj（访问码：9u5y）
+  
+  下载后安装，之后和windows的操作基本是一致的，安装扩展，然后粘贴如下代码：
+  
+  `{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run":"never",
+    "workbench.iconTheme": "vs-seti",
+    "workbench.colorTheme": "Solarized Light",
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 25,
+    "[latex]": {
+        
+
+    
+    
+    
+
+        "editor.formatOnPaste": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix"
+    },
+    "editor.wordWrap": "on",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+}`
+  接着打开任意的.tex文件即可command+option+B编译。
+  
   
   
   
