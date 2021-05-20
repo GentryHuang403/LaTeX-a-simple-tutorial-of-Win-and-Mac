@@ -226,7 +226,11 @@ CTeX会污染系统环境变量以及造成一些其他对系统有破坏性的�
 }`
   接着打开任意的.tex文件即可command+option+B编译。
   
-  
+  ## 2.快捷键(以Mac为例)
+  0.编译：option+command+b
+  1.打开PDF：option+command+v
+  2.正向搜索：点击文中某处，option+command+j
+  3.反向搜索：（使用阅读器：自带Tab）按住command+shift，单击pdf文中某处
   
   
   
