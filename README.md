@@ -231,7 +231,7 @@ CTeX会污染系统环境变量以及造成一些其他对系统有破坏性的�
   1.打开PDF：option+command+v
   2.正向搜索：点击文中某处，option+command+j
   3.反向搜索：（使用阅读器：自带Tab）按住command+shift，单击pdf文中某处
-  
+  4.打开TeX扩展栏：command+b
   
   
   
