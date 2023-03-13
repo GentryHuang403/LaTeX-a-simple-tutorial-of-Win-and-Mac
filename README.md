@@ -142,7 +142,7 @@ CTeX会污染系统环境变量以及造成一些其他对系统有破坏性的�
   接着下载VSCODE for mac，我没有找到国内镜像站，就把链接直接放上来了：
   https://cloud.189.cn/t/I7JrEram67Fj（访问码：9u5y）
   
-  下载后安装，之后和windows的操作基本是一致的，安装扩展，然后粘贴如下代码：
+  下载后安装，之后和windows的操作基本是一致的，安装扩展，然后粘贴如下代码到json（右上角靠左那个按钮点击就进去json编辑页面）：
   
   `{
     "latex-workshop.latex.tools": [
